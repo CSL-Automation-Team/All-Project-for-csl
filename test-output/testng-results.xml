@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-11-17T00:18:25 BDT" name="Default suite" finished-at="2020-11-17T00:20:16 BDT" duration-ms="110649">
+    <groups>
+    </groups>
+    <test started-at="2020-11-17T00:18:25 BDT" name="Default test" finished-at="2020-11-17T00:20:16 BDT" duration-ms="110649">
+      <class name="kandareeTest.MyTasks">
+        <test-method is-config="true" signature="capabilities()[pri:0, instance:kandareeTest.MyTasks@3911c2a7]" started-at="2020-11-17T00:18:25 BDT" name="capabilities" finished-at="2020-11-17T00:18:35 BDT" duration-ms="9869" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- capabilities -->
+        <test-method signature="LoginFuntion()[pri:0, instance:kandareeTest.MyTasks@3911c2a7]" started-at="2020-11-17T00:18:35 BDT" name="LoginFuntion" finished-at="2020-11-17T00:18:41 BDT" duration-ms="5848" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginFuntion -->
+        <test-method is-config="true" signature="captureScreenShots()[pri:0, instance:kandareeTest.MyTasks@3911c2a7]" started-at="2020-11-17T00:18:41 BDT" name="captureScreenShots" finished-at="2020-11-17T00:18:42 BDT" duration-ms="822" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenShots -->
+        <test-method signature="Nevigate()[pri:0, instance:kandareeTest.MyTasks@3911c2a7]" started-at="2020-11-17T00:18:42 BDT" name="Nevigate" finished-at="2020-11-17T00:18:46 BDT" duration-ms="3670" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Nevigate -->
+        <test-method is-config="true" signature="captureScreenShots()[pri:0, instance:kandareeTest.MyTasks@3911c2a7]" started-at="2020-11-17T00:18:46 BDT" name="captureScreenShots" finished-at="2020-11-17T00:18:46 BDT" duration-ms="628" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenShots -->
+        <test-method signature="AssignTask()[pri:4, instance:kandareeTest.MyTasks@3911c2a7]" started-at="2020-11-17T00:18:46 BDT" name="AssignTask" finished-at="2020-11-17T00:18:47 BDT" duration-ms="182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignTask -->
+        <test-method is-config="true" signature="captureScreenShots()[pri:0, instance:kandareeTest.MyTasks@3911c2a7]" started-at="2020-11-17T00:18:47 BDT" name="captureScreenShots" finished-at="2020-11-17T00:18:47 BDT" duration-ms="933" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenShots -->
+        <test-method signature="UpdateAssignTask()[pri:5, instance:kandareeTest.MyTasks@3911c2a7]" started-at="2020-11-17T00:18:47 BDT" name="UpdateAssignTask" finished-at="2020-11-17T00:19:33 BDT" duration-ms="45920" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpdateAssignTask -->
+        <test-method is-config="true" signature="captureScreenShots()[pri:0, instance:kandareeTest.MyTasks@3911c2a7]" started-at="2020-11-17T00:19:33 BDT" name="captureScreenShots" finished-at="2020-11-17T00:19:34 BDT" duration-ms="395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenShots -->
+        <test-method signature="DeleteAssignTask()[pri:6, instance:kandareeTest.MyTasks@3911c2a7]" started-at="2020-11-17T00:19:34 BDT" name="DeleteAssignTask" finished-at="2020-11-17T00:19:38 BDT" duration-ms="4491" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteAssignTask -->
+        <test-method is-config="true" signature="captureScreenShots()[pri:0, instance:kandareeTest.MyTasks@3911c2a7]" started-at="2020-11-17T00:19:38 BDT" name="captureScreenShots" finished-at="2020-11-17T00:19:39 BDT" duration-ms="474" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenShots -->
+        <test-method signature="OldTask()[pri:7, instance:kandareeTest.MyTasks@3911c2a7]" started-at="2020-11-17T00:19:39 BDT" name="OldTask" finished-at="2020-11-17T00:19:39 BDT" duration-ms="332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OldTask -->
+        <test-method is-config="true" signature="captureScreenShots()[pri:0, instance:kandareeTest.MyTasks@3911c2a7]" started-at="2020-11-17T00:19:39 BDT" name="captureScreenShots" finished-at="2020-11-17T00:19:40 BDT" duration-ms="738" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenShots -->
+        <test-method signature="UpdateOldTask()[pri:8, instance:kandareeTest.MyTasks@3911c2a7]" started-at="2020-11-17T00:19:40 BDT" name="UpdateOldTask" finished-at="2020-11-17T00:20:16 BDT" duration-ms="35859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpdateOldTask -->
+        <test-method is-config="true" signature="captureScreenShots()[pri:0, instance:kandareeTest.MyTasks@3911c2a7]" started-at="2020-11-17T00:20:16 BDT" name="captureScreenShots" finished-at="2020-11-17T00:20:16 BDT" duration-ms="442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenShots -->
+      </class> <!-- kandareeTest.MyTasks -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,4 +1,4 @@
-package kandareeTest;
+package com.cslsoft.KandareeLiteApp;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;

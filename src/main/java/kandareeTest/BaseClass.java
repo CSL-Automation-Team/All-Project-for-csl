@@ -1,4 +1,4 @@
-package kandareeTest;
+package com.cslsoft.KandareeLiteApp;
 
 import java.io.File;
 import java.io.IOException;
@@ -98,7 +98,7 @@ public class BaseClass {
 	
 	}
 
-	
+
 	
 
 	

@@ -1,4 +1,4 @@
-package kandareeTest;
+package com.cslsoft.KandareeLiteApp;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -94,7 +94,7 @@ public class Customer extends BaseClass  {
 		MobileElement elemen2 = (MobileElement) driver
 								.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"
 								+ ".scrollIntoView(new UiSelector().text(\"" + UpdateCustomer + "\"))"));
-	//fail for screenshot	
+	
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);		
 		List<AndroidElement> xyz1= driver.findElementsByXPath("//android.widget.TextView[@text='Create New Customer']");
 		for(int i=0;i<xyz1.size();i++)
@@ -121,8 +121,8 @@ public class Customer extends BaseClass  {
 				 
 		driver.findElementByXPath("//android.widget.TextView[@text='Download']").click();	
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				 
-		driver.findElementByXPath("//android.view.ViewGroup[@content-desc=\"Photo taken on Nov 12, 2020 5:19:21 PM\"]").click();
+		//fail for screenshot			 
+		driver.findElementByXPath("////android.view.ViewGroup[@content-desc=\"Photo taken on Nov 12, 2020 5:19:21 PM\"]").click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/yesButton").click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -183,7 +183,8 @@ public class Customer extends BaseClass  {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		 
 		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/ll_disableMain").click();
-		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/yesButton").click();
+		//fail for screenshot	
+		driver.findElementById("//bd.com.cslsoft.kandareeliteapp:id/yesButton").click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/yesButton").click();
 		

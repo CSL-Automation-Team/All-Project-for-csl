@@ -1,10 +1,12 @@
-package kandareeTest;
+package com.cslsoft.KandareeLiteApp;
 import java.net.MalformedURLException;
+import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 //import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
@@ -22,6 +24,7 @@ import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
 import static java.time.Duration.ofSeconds;
 
 import io.appium.java_client.touch.LongPressOptions;
+import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
 
@@ -112,11 +115,7 @@ public class MyTasks extends BaseClass  {
 		
 		driver.findElementByXPath("//android.widget.LinearLayout[3]/android.widget.LinearLayout[1]/android.widget.ImageView").click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		for(int i=0; i<3;i++)
-			{
-				driver.pressKey(new KeyEvent(AndroidKey.BACK));
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			}
+		BackFun();
 				
 		// Date.
 		
@@ -139,21 +138,13 @@ public class MyTasks extends BaseClass  {
 		//call to Assigner
 		
 		driver.findElementByXPath("//android.widget.LinearLayout[2]/android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ImageView").click();
-		for(int i=0; i<3;i++)
-			{
-				driver.pressKey(new KeyEvent(AndroidKey.BACK));
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			}
+		BackFun();
 				
 		//call to Assignee
 		
 		driver.findElementByXPath("//android.widget.LinearLayout[4]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ImageView").click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		for(int i=0; i<3;i++)
-			{
-				driver.pressKey(new KeyEvent(AndroidKey.BACK));
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			}
+		BackFun();
 	
 		driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector()."+"scrollable(true)).scrollIntoView(new UiSelector().resourceId(\"bd.com.cslsoft.kandareeliteapp:id/remarks\"))"));
 		
@@ -193,100 +184,29 @@ public class MyTasks extends BaseClass  {
 		System.out.println("Updater MyTask Executed!!");
 	}
 	
-//Miscellaneous	
-	@Test(priority = 3)
-	public void MyTaskMiscellaneous() throws InterruptedException {
-		//searching
-		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/ll_search").click(); 
-		driver.hideKeyboard();
-		driver.findElementById("android:id/search_src_text").sendKeys("Update For Testing");	
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(2000);
-		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/llBack").click();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				
-		//Sorting
-		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/ll_filter").click();
-		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/ll_close").click();
-		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/ll_filter").click();
-		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/rbTaskStatus").click();
-		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/llDescendingBg").click();
-		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/btnApplyALl").click();
-				
-
-
-		//Call from My Task and complete
-		String Call = "Update For Testing";
-		MobileElement element1 = (MobileElement) driver
-						.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"
-								+ ".scrollIntoView(new UiSelector().text(\"" + Call + "\"))"));
-		List<AndroidElement> xyz5=driver.findElementsByClassName("android.widget.TextView");
-		for(int i=0;i<xyz5.size();i++)
-			{
-				if(xyz5.get(i).getText().contains("Update For Testing"))
-					{
-						driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/phone_icon").click();
-						driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-						for(int j=0; j<=2;j++)
-						 {
-							driver.pressKey(new KeyEvent(AndroidKey.BACK));
-							driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-						 }
-						//driver.findElementByXPath("//android.widget.LinearLayout[2]/android.widget.ImageView").click();
-						
-						driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/llCompleteTask").click();
-						driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-						driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/yesButton").click();
-						driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/yesButton").click();
-						driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-						
-						break;
-						
-					}		
-			}
-		System.out.println("Miscellaneous Task Executed!!");
-		
-
-	}
 	
 // Reassaign.................	
+	@Test(priority = 3)
 	public void Reassaign() {
-		/*	String TaskCart1 = "Work For Automationnew";
-		MobileElement element = (MobileElement) driver
-				.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"
-						+ ".scrollIntoView(new UiSelector().text(\"" + TaskCart1 + "\"))"));
 		
-		List<AndroidElement> xyz5=driver.findElementsByClassName("android.widget.TextView");
-		for(int i=0;i<xyz5.size();i++)
-		{
-			if(xyz5.get(i).getText().contains("Work For Automationnew"))
-			{
-				Point point2=driver.findElementByXPath("//android.widget.TextView[@text='Work For Automationnew']").getCenter();
-				 Point point3=driver.findElementByXPath("//android.widget.TextView[@text='Work For Automationnew']").getLocation();
-							
-				TouchAction tcD=new TouchAction(driver);
-							
-				tcD.longPress(longPressOptions().withPosition(PointOption.point(point2.x+100, point2.y+20))
-				 .withDuration(ofSeconds(3))).moveTo(PointOption.point(point3.x, point3.y+20)).release().perform();
-				
-				
-				 
-				 //tcD.longPress(longPressOptions().withPosition(PointOption.point(point3.x+800, point3.y+20)).withDuration(ofSeconds(1))).release().perform();
-				//tcD.longPress(point(point2.x+90, point2.y)).release().perform();
-				 
-				break;
-				
-			}
-						
-		}
-	
+		String ser="Update For Testing";
+		Searching(ser);
+		Scroll();
+		
+		Point point2=driver.findElementByXPath("//android.widget.TextView[@text='Update For Testing']").getCenter();
+		Point point3=driver.findElementByXPath("//android.widget.TextView[@text='Update For Testing']").getLocation();
+					
+		TouchAction tcD=new TouchAction(driver);
+					
+		tcD.longPress(longPressOptions().withPosition(PointOption.point(point2.x+100, point2.y+20))
+		 .withDuration(ofSeconds(3))).moveTo(PointOption.point(point3.x, point3.y+20)).release().perform();
 		
 		
 		 driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/ll_reAssign").click();
 		 driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/yesButton").click();
 		 driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/ll_newAssigneeDropDown").click();
 		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		 driver.findElementByXPath("//android.widget.TextView[@text='Test 1']").click();
+		 driver.findElementByXPath("//android.widget.TextView[@text='Musharrat Ahmed']").click();
 		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		 driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/doneButton").click();
 		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -296,22 +216,62 @@ public class MyTasks extends BaseClass  {
 		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		 driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/yesButton").click();
 		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		*/
+		 
+		 driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/llBack").click();
+		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 
 	}
-	//Assign Task
+	
+	//Miscellaneous	
 		@Test(priority = 4)
+		public void MyTaskMiscellaneous() throws InterruptedException {
+
+			//Sorting
+			driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/ll_filter").click();
+			driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/ll_close").click();
+			driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/ll_filter").click();
+			driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/rbTaskStatus").click();
+			driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/llDescendingBg").click();
+			driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/btnApplyALl").click();
+					
+
+
+			//Call from My Task and complete
+			
+
+			driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/phone_icon").click();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			BackFun();
+			//driver.findElementByXPath("//android.widget.LinearLayout[2]/android.widget.ImageView").click();
+					
+		    driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/llCompleteTask").click();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/noButton").click();
+			//driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/yesButton").click();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+			System.out.println("Miscellaneous Task Executed!!");
+			
+			
+		}
+
+
+	//Assign Task
+		@Test(priority = 5)
 		public void AssignTask() {
 			driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/nav_assigned_task").click();
 			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 			
 			System.out.println("Navigate MyTask to Assign Task!");
+			
+			
 
 		}
 		
-		@Test(priority = 5)
+		@Test(priority = 6)
 		public void UpdateAssignTask() {
-			String UpdateAssTask = "Update For Testing";
+			String UpdateAssTask = "Update Assign Task";
 			MobileElement element = (MobileElement) driver
 					.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"
 							+ ".scrollIntoView(new UiSelector().text(\"" + UpdateAssTask + "\"))"));
@@ -319,9 +279,9 @@ public class MyTasks extends BaseClass  {
 			List<AndroidElement> xyz=driver.findElementsByClassName("android.widget.TextView");
 			for(int i=0;i<xyz.size();i++)
 			{
-				if(xyz.get(i).getText().contains("Update For Testing"))
+				if(xyz.get(i).getText().contains("Update Assign Task"))
 				{
-					driver.findElementByXPath("//android.widget.TextView[@text='Update For Testing']").click();
+					driver.findElementByXPath("//android.widget.TextView[@text='Update Assign Task']").click();
 					driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 					break;
 					
@@ -336,7 +296,7 @@ public class MyTasks extends BaseClass  {
 			driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/txt_field_value").clear();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			
-			driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/txt_field_value").sendKeys("Update Assign Task");
+			driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/txt_field_value").sendKeys("Update For Testing");
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			driver.hideKeyboard();
 			
@@ -350,11 +310,7 @@ public class MyTasks extends BaseClass  {
 			
 			driver.findElementByXPath("//android.widget.LinearLayout[3]/android.widget.LinearLayout[1]/android.widget.ImageView").click();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			for(int i=0; i<3;i++)
-				{
-					driver.pressKey(new KeyEvent(AndroidKey.BACK));
-					driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				}
+			BackFun();
 					
 			// Date.
 			
@@ -387,21 +343,13 @@ public class MyTasks extends BaseClass  {
 			//call to Assigner
 			
 			driver.findElementByXPath("//android.widget.LinearLayout[2]/android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ImageView").click();
-			for(int i=0; i<3;i++)
-				{
-					driver.pressKey(new KeyEvent(AndroidKey.BACK));
-					driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				}
+			BackFun();
 					
 			//call to Assignee
 			
 			driver.findElementByXPath("//android.widget.LinearLayout[4]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ImageView").click();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			for(int i=0; i<3;i++)
-				{
-					driver.pressKey(new KeyEvent(AndroidKey.BACK));
-					driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				}
+			BackFun();
 		
 			driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector()."+"scrollable(true)).scrollIntoView(new UiSelector().resourceId(\"bd.com.cslsoft.kandareeliteapp:id/remarks\"))"));
 			
@@ -450,51 +398,34 @@ public class MyTasks extends BaseClass  {
 		}
 
 		
-	@Test(priority = 6)
+	@Test(priority = 7)
 		public void DeleteAssignTask() {
-			String DelCart ="Update Assign Task";
-			MobileElement element = (MobileElement) driver
-					.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"
-							+ ".scrollIntoView(new UiSelector().text(\"" + DelCart + "\"))"));
-			
-			List<AndroidElement> xyz5=driver.findElementsByClassName("android.widget.TextView");
-			for(int i=0;i<xyz5.size();i++)
-			{
-				if(xyz5.get(i).getText().contains("Update Assign Task"))
-				{
-					Point point2=driver.findElementByXPath("//android.widget.TextView[@text='Update Assign Task']").getCenter();
-					 Point point3=driver.findElementByXPath("//android.widget.TextView[@text='Update Assign Task']").getLocation();
-								
-					TouchAction tcD=new TouchAction(driver);
-								
-					tcD.longPress(longPressOptions().withPosition(PointOption.point(point2.x+100, point2.y+20))
-					 .withDuration(ofSeconds(3))).moveTo(PointOption.point(point3.x, point3.y+20)).release().perform();
 
-					 
-					break;
-					
-				}
-							
-			}
 			
-			System.out.println("DeleteAssignTask Executed!");
-	// Need to correct By dev Team	
-			/*
-			driver.findElementByXPath("//*[contains(text(),'Delete')]").click();
-			//driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/ll_reAssign").click();
+			String ser="Update Assign Task";
+			Searching(ser);
+			Scroll();
+			Point point2=driver.findElementByXPath("//android.widget.TextView[@text='Update Assign Task']").getCenter();
+			Point point3=driver.findElementByXPath("//android.widget.TextView[@text='Update Assign Task']").getLocation();
+								
+			TouchAction tcD=new TouchAction(driver);
+								
+			tcD.longPress(longPressOptions().withPosition(PointOption.point(point2.x+100, point2.y+20))
+					 .withDuration(ofSeconds(3))).moveTo(PointOption.point(point3.x, point3.y+20)).release().perform();
+			
+			driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/ll_reAssign").click();
 			//driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/noButton").click();
 			driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/yesButton").click();
 			driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/yesButton").click();
-			*/
 			
+			System.out.println("DeleteAssignTask Executed!");
 			
 
 		}
 
-
 	//Old Task....
 
-	@Test(priority = 7)
+	@Test(priority = 8)
 	public void OldTask() {
 		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/nav_old_task").click();
 		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
@@ -503,7 +434,7 @@ public class MyTasks extends BaseClass  {
 
 	}
 		
-	@Test(priority = 8)
+	@Test(priority = 9)
 	public void UpdateOldTask() {
 		String UpdateAssTask = "DIP";
 		MobileElement element = (MobileElement) driver
@@ -528,32 +459,19 @@ public class MyTasks extends BaseClass  {
 		
 		driver.findElementByXPath("//android.widget.LinearLayout[1]/android.widget.LinearLayout[3]/android.widget.LinearLayout[1]/android.widget.ImageView").click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		for(int i=0; i<=2;i++)
-			{
-				driver.pressKey(new KeyEvent(AndroidKey.BACK));
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			}
-				
+	
+		BackFun();		
 				 
 		//call to Assigner
 		
 		driver.findElementByXPath("//android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ImageView").click();
-		for(int i=0; i<=2;i++)
-			{
-				driver.pressKey(new KeyEvent(AndroidKey.BACK));
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			}
+		BackFun();
 				
 		//call to Assignee
 		
 		driver.findElementByXPath("//android.widget.LinearLayout[4]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ImageView").click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		for(int i=0; i<=2;i++)
-			{
-				driver.pressKey(new KeyEvent(AndroidKey.BACK));
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			}
-
+		BackFun();
 		
 		// back
 		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/llBack").click();
@@ -571,19 +489,13 @@ public class MyTasks extends BaseClass  {
 					{
 						driver.findElementByXPath("//android.widget.LinearLayout/android.widget.LinearLayout[4]/android.widget.LinearLayout[1]/android.widget.ImageView").click();
 						driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-						for(int j=0; j<=2;j++)
-						 {
-							driver.pressKey(new KeyEvent(AndroidKey.BACK));
-							driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-						 }
+						
+						BackFun();
 						
 						driver.findElementByXPath("//android.widget.LinearLayout/android.widget.LinearLayout[4]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.ImageView").click();
 						driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-						for(int j=0; j<=2;j++)
-						 {
-							driver.pressKey(new KeyEvent(AndroidKey.BACK));
-							driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-						 }
+						
+						BackFun();
 						break;
 						
 					}		
@@ -594,6 +506,73 @@ public class MyTasks extends BaseClass  {
 
 
 	}
+	
+	@Test(priority = 10)
+	public void IncompleteTask() {
+
+		
+		String ser="Update For Testing";
+		Searching(ser);
+		//AllMethods scr=new AllMethods();
+		//scr.Scroll();
+		Scroll();
+		Point point2=driver.findElementByXPath("//android.widget.TextView[@text='Update For Testing']").getCenter();
+		Point point3=driver.findElementByXPath("//android.widget.TextView[@text='Update For Testing']").getLocation();
+							
+		TouchAction tcD=new TouchAction(driver);
+							
+		tcD.longPress(longPressOptions().withPosition(PointOption.point(point2.x+100, point2.y+20))
+				 .withDuration(ofSeconds(3))).moveTo(PointOption.point(point3.x, point3.y+20)).release().perform();
+		
+		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/ll_reAssign").click();
+		//driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/noButton").click();
+		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/yesButton").click();
+		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/yesButton").click();
+		
+		System.out.println("IncompleteTask Executed!");
 		
 
+	}
+	
+	
+	
+	
+	
+	public void Searching(String ser) {
+		driver.findElementById("bd.com.cslsoft.kandareeliteapp:id/ll_search").click(); 
+		driver.findElementById("android:id/search_src_text").sendKeys(ser);	
+		driver.hideKeyboard();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+	}
+	
+	public void BackFun()
+	{
+		for(int j=0; j<=2;j++)
+		 {
+			driver.pressKey(new KeyEvent(AndroidKey.BACK));
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		 }
+	}
+	public void Scroll()
+	{
+		for(int i=0; i<4; i++)
+		{
+			Dimension dimension=driver.manage().window().getSize();
+			int start_x=(int) (dimension.width*0.5);
+			int start_y=(int) (dimension.height*0.2);
+			
+			int end_x=(int) (dimension.width*0.5);
+			int end_y=(int) (dimension.height*0.8);
+			
+			TouchAction tcD=new TouchAction(driver);
+			tcD.press(PointOption.point(start_x, start_y)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+			.moveTo(PointOption.point(end_x, end_y)).release().perform();
+		}
+
+		
+	}
+
+
 }
+

@@ -1,4 +1,4 @@
-package kandareeTest;
+package com.cslsoft.KandareeLiteApp;
 
 import java.io.File;
 import java.net.MalformedURLException;

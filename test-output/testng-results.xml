@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-11-23T14:36:20 BDT" name="Default suite" finished-at="2020-11-23T14:40:33 BDT" duration-ms="252905">
+    <groups>
+    </groups>
+    <test started-at="2020-11-23T14:36:20 BDT" name="Default test" finished-at="2020-11-23T14:40:33 BDT" duration-ms="252905">
+      <class name="com.cslsoft.KandareeLiteApp.MyTasks">
+        <test-method is-config="true" signature="capabilities()[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:36:20 BDT" name="capabilities" finished-at="2020-11-23T14:36:36 BDT" duration-ms="16149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- capabilities -->
+        <test-method signature="Nevigate()[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:36:36 BDT" name="Nevigate" finished-at="2020-11-23T14:36:42 BDT" duration-ms="5669" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Nevigate -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:36:42 BDT" name="tearDown" finished-at="2020-11-23T14:36:42 BDT" duration-ms="388" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Nevigate status=SUCCESS method=MyTasks.Nevigate()[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="CreateTask()[pri:1, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:36:42 BDT" name="CreateTask" finished-at="2020-11-23T14:36:54 BDT" duration-ms="11793" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateTask -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:36:54 BDT" name="tearDown" finished-at="2020-11-23T14:36:55 BDT" duration-ms="450" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateTask status=SUCCESS method=MyTasks.CreateTask()[pri:1, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="UpdateTask()[pri:2, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:36:55 BDT" name="UpdateTask" finished-at="2020-11-23T14:37:34 BDT" duration-ms="39493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpdateTask -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:37:34 BDT" name="tearDown" finished-at="2020-11-23T14:37:35 BDT" duration-ms="606" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UpdateTask status=SUCCESS method=MyTasks.UpdateTask()[pri:2, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="Reassaign()[pri:3, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:37:35 BDT" name="Reassaign" finished-at="2020-11-23T14:37:57 BDT" duration-ms="22339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Reassaign -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:37:57 BDT" name="tearDown" finished-at="2020-11-23T14:37:57 BDT" duration-ms="292" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Reassaign status=SUCCESS method=MyTasks.Reassaign()[pri:3, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="MyTaskMiscellaneous()[pri:4, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:37:57 BDT" name="MyTaskMiscellaneous" finished-at="2020-11-23T14:38:05 BDT" duration-ms="7582" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MyTaskMiscellaneous -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:38:05 BDT" name="tearDown" finished-at="2020-11-23T14:38:05 BDT" duration-ms="399" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MyTaskMiscellaneous status=SUCCESS method=MyTasks.MyTaskMiscellaneous()[pri:4, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="AssignTask()[pri:5, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:38:05 BDT" name="AssignTask" finished-at="2020-11-23T14:38:06 BDT" duration-ms="297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignTask -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:38:06 BDT" name="tearDown" finished-at="2020-11-23T14:38:06 BDT" duration-ms="627" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AssignTask status=SUCCESS method=MyTasks.AssignTask()[pri:5, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="CreateAssignTask()[pri:6, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:38:06 BDT" name="CreateAssignTask" finished-at="2020-11-23T14:38:19 BDT" duration-ms="12530" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateAssignTask -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:38:19 BDT" name="tearDown" finished-at="2020-11-23T14:38:19 BDT" duration-ms="707" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateAssignTask status=SUCCESS method=MyTasks.CreateAssignTask()[pri:6, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="UpdateAssignTask()[pri:7, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:38:19 BDT" name="UpdateAssignTask" finished-at="2020-11-23T14:39:26 BDT" duration-ms="67031" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpdateAssignTask -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:39:26 BDT" name="tearDown" finished-at="2020-11-23T14:39:27 BDT" duration-ms="654" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UpdateAssignTask status=SUCCESS method=MyTasks.UpdateAssignTask()[pri:7, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="DeleteAssignTask()[pri:8, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:39:27 BDT" name="DeleteAssignTask" finished-at="2020-11-23T14:39:43 BDT" duration-ms="16188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteAssignTask -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:39:43 BDT" name="tearDown" finished-at="2020-11-23T14:39:44 BDT" duration-ms="518" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=DeleteAssignTask status=SUCCESS method=MyTasks.DeleteAssignTask()[pri:8, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="OldTask()[pri:9, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:39:44 BDT" name="OldTask" finished-at="2020-11-23T14:39:44 BDT" duration-ms="300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OldTask -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:39:44 BDT" name="tearDown" finished-at="2020-11-23T14:39:45 BDT" duration-ms="853" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=OldTask status=SUCCESS method=MyTasks.OldTask()[pri:9, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="UOldTaskFun()[pri:10, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:39:45 BDT" name="UOldTaskFun" finished-at="2020-11-23T14:40:17 BDT" duration-ms="31760" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UOldTaskFun -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:40:17 BDT" name="tearDown" finished-at="2020-11-23T14:40:17 BDT" duration-ms="351" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UOldTaskFun status=SUCCESS method=MyTasks.UOldTaskFun()[pri:10, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="IncompleteTask()[pri:11, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:40:17 BDT" name="IncompleteTask" finished-at="2020-11-23T14:40:33 BDT" duration-ms="15846" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IncompleteTask -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:40:33 BDT" name="tearDown" finished-at="2020-11-23T14:40:33 BDT" duration-ms="24" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=IncompleteTask status=SUCCESS method=MyTasks.IncompleteTask()[pri:11, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="CloseApps()[pri:0, instance:com.cslsoft.KandareeLiteApp.MyTasks@7ed7259e]" started-at="2020-11-23T14:40:33 BDT" name="CloseApps" finished-at="2020-11-23T14:40:33 BDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseApps -->
+      </class> <!-- com.cslsoft.KandareeLiteApp.MyTasks -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
